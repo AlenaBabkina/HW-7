@@ -1,15 +1,16 @@
 public class Main {
 
     public static void main(String[] args) {
+
         {
             System.out.println("Задача 1");
-            int month = 1;
+            int month = 0;
             int i = 0;
             while (i < 2_459_000) {
                 i += 15_000;
-                month++;
+                month += 1;
+                System.out.println("Месяц " + month + ", сумма накоплений равна " + i + " рублей");
             }
-            System.out.println("Месяц " + month + ", сумма накоплений равна " + i + " рублей");
         }
         {
             System.out.println("Задача 2");
@@ -74,9 +75,9 @@ public class Main {
         }
         {
             System.out.println("Задача 8");
-            for (int i = 2024 - 200; i < 2024 + 100; i++) {
-                if (i % 79 == 0) {
-                    System.out.println(i);
+            for (int year = 0; year < 2024 + 100; year += 79) {
+                if (year >= 2024 - 200) {
+                    System.out.println(year);
                 }
             }
         }
